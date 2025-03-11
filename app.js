@@ -3,7 +3,7 @@ import { newMessageRouter } from "./routes/newMessage.js";
 import { indexRouter } from "./routes/index.js";
 
 const app = express();
-const PORT = 3100;
+const PORT = process.env.PORT || 3600;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
