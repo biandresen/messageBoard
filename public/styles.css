@@ -251,16 +251,20 @@ footer p {
 /* Mobile styles */
 @media screen and (max-width: 540px) {
   .header-container {
-    max-width: 320px;
+    max-width: 280px;
+    flex-direction: column;
   }
   .app-container {
-    max-width: 320px;
+    max-width: 280px;
   }
   .app-name-container h1 {
-    font-size: 18px;
+    font-size: 28px;
   }
   .app-name-container p {
     font-size: 12px;
+  }
+  nav {
+    align-self: end;
   }
   nav ul {
     gap: 5px;
@@ -299,10 +303,10 @@ footer p {
     padding: 20px;
   }
   .message-details-id {
-    font-size: 32px;
+    font-size: 24px;
   }
   .message-details-text {
-    font-size: 24px;
+    font-size: 18px;
   }
   .message-details-user,
   .message-details-time {
