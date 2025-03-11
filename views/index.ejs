@@ -3,21 +3,38 @@
   <%- include("partials/head.ejs", { title: locals.title }) %>
 
   <body>
-    <section class="display-messages">
-      <% locals.messages.forEach(message => { %>
-        <div>
-          <h3>
-            <%= message.text %>
-          </h3>
-          <p>
-            <%= message.user %>
-          </p>
-          <p>
-            <i><%= message.added %></i>
-          </p>
-        </div>
-      <% }); %>
-    </section>
-    <button type="button"><a href="/newMessage">New Message</a></button>
+    <%- include("partials/header.ejs") %>
+
+    <div class="app-container">
+      <main class="main-container">
+        <section class="messages-section">
+          <% locals.messages.forEach(message => { %>
+            <div class="message-box-container">
+              <div class="message-container__text message-container flex">
+                <img type="svg" src="/icons/messageIcon2.svg" alt="message icon">
+                <h3>
+               <%= message.text %>
+                </h3>
+              </div>
+              <div class="message-container__user message-container flex">
+                <img type="svg" src="/icons/userIcon.svg" alt="user icon">
+                <p>
+               <%= message.user %>
+                </p>
+              </div>
+              <div class="message-container__time message-container flex">
+                <img type="svg" src="/icons/clockIcon.svg" alt="clock icon">
+                <p>
+                  <i><%= message.added.toString().split(" GMT")[0] %></i>
+                </p>
+              </div>
+            </div>
+          <% }); %>
+          <a href="/newMessage" class="button">New Message</a>
+        </section>
+      </main>
+
+    </div>
+        <%- include("partials/footer.ejs") %>
   </body>
 </html>

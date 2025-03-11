@@ -2,15 +2,20 @@
 <html lang="en">
   <%- include("partials/head.ejs", {title: locals.title})  %>
   <body>
-    <section class="new-message">
-      <h2>Create Message</h2>
-      <form class="message-form" method="POST" action="/newMessage">
+    <%- include("partials/header.ejs") %>
+    <div class="app-container">
+      <main class="main-container">
+        <section class="new-message-container">
+         <h2>Create Message</h2>
+         <form class="message-form" method="POST" action="/newMessage">
           <label name="userName" for="userName">Username:</label>
           <input name="userName" id="userName" type="text" required />
           <label name="messageText" for="messageText">Message:</label>
           <textarea name="messageText" id="messageText" type="text" required ></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
+         <button class="button" type="submit">Send</button>
+        </form>
+      </section>
+      </main>
+    </div>
   </body>
 </html>
