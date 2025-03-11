@@ -1,12 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
-    <title>Message Board</title>
-  </head>
+  <%- include("partials/head.ejs", { title: locals.title }) %>
+
   <body>
-    <h1><%= message %></h1>
+    <section class="display-messages">
+      <% locals.messages.forEach(message => { %>
+        <div>
+          <h3>
+            <%= message.text %>
+          </h3>
+          <p>
+            <%= message.user %>
+          </p>
+          <p>
+            <i><%= message.added %></i>
+          </p>
+        </div>
+      <% }); %>
+    </section>
+    <button type="button"><a href="/newMessage">New Message</a></button>
   </body>
 </html>

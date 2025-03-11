@@ -1,14 +1,16 @@
 import express from "express";
+import { newMessageRouter } from "./routes/newMessage.js";
+import { indexRouter } from "./routes/index.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = 3100;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.render("index", { message: "Test message" });
-});
+app.use("/", indexRouter);
+app.use("/newMessage", newMessageRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
