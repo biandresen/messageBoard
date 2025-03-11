@@ -5,6 +5,9 @@
 ![Fullstack Learning](https://img.shields.io/badge/Fullstack-Development-blue?style=for-the-badge)
 
 A simple message board built using **Node.js**, **Express**, and **EJS**.
+Deployed with Render (PaaS)
+
+Live preview 👉 <a href="https://mini-messageboard-4kua.onrender.com/">Click here</a>
 
 ---
 
