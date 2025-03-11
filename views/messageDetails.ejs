@@ -19,7 +19,7 @@
           </div>
           <div class="message-container flex">
             <img type="detail-svg" src="/icons/clockIcon.svg" alt="clock icon">
-            <p class="message-details-time"> <i><%= locals.message.added  %></i>  </p>
+            <p class="message-details-time"> <i><%= locals.message.added.toString().split(" GMT")[0]  %></i>  </p>
           </div>
         </section>
       </main>

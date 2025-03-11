@@ -31,8 +31,9 @@ li {
   list-style: none;
   color: var(--clr-text);
 }
-html {
+body {
   min-height: 100vh;
+  min-width: 100vw;
   background: linear-gradient(
     45deg,
     var(--clr-primary) 0%,
@@ -40,9 +41,6 @@ html {
   );
   background-repeat: no-repeat;
   color: var(--clr-text);
-}
-body {
-  margin: auto;
 }
 .flex {
   display: flex;
@@ -192,8 +190,122 @@ footer {
   position: absolute;
   bottom: 20px;
   left: 50%;
+  translate: -50%;
   align-self: center;
 }
 footer p {
   font-size: 18px;
+}
+
+/* Small desktop styles */
+@media screen and (max-width: 1140px) {
+  header {
+    padding: 5px 0 20px 0;
+  }
+  .header-container {
+    max-width: 800px;
+  }
+  .app-container {
+    max-width: 800px;
+  }
+  .app-name-container h1 {
+    font-size: 32px;
+  }
+  .app-name-container p {
+    font-size: 14px;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 850px) {
+  .header-container {
+    max-width: 500px;
+  }
+  .app-container {
+    max-width: 500px;
+  }
+  .app-name-container h1 {
+    font-size: 24px;
+  }
+  .app-name-container p {
+    font-size: 18px;
+  }
+  nav ul {
+    gap: 10px;
+  }
+  nav ul li a {
+    font-size: 12px;
+  }
+  img[type="header-svg"] {
+    width: auto;
+    height: 50px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 540px) {
+  .header-container {
+    max-width: 320px;
+  }
+  .app-container {
+    max-width: 320px;
+  }
+  .app-name-container h1 {
+    font-size: 18px;
+  }
+  .app-name-container p {
+    font-size: 12px;
+  }
+  nav ul {
+    gap: 5px;
+  }
+  nav ul li a {
+    font-size: 11px;
+  }
+  img[type="header-svg"] {
+    height: 35px;
+  }
+  img[type="svg"] {
+    height: 15px;
+  }
+  img[type="detail-svg"] {
+    height: 20px;
+  }
+  .message-container__text {
+    margin-bottom: 5px;
+  }
+  .message-container__text h3 {
+    font-size: 18px;
+  }
+  .message-container__time p {
+    font-size: 12px;
+  }
+  .button {
+    font-size: 14px;
+  }
+  .new-message-container {
+    max-width: 330px;
+  }
+  .new-message-container label {
+    font-size: 18px;
+  }
+  .message-details-section {
+    padding: 20px;
+  }
+  .message-details-id {
+    font-size: 32px;
+  }
+  .message-details-text {
+    font-size: 24px;
+  }
+  .message-details-user,
+  .message-details-time {
+    font-size: 12px;
+  }
 }
