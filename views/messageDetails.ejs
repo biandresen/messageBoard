@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <%- include("partials/head.ejs", { title: locals.title }) %>
+
+  <body>
+    <%- include("partials/header.ejs") %>
+
+    <div class="app-container">
+      <main class="main-container">
+        <section class="message-details-section">
+          <h3 class="message-details-id"> Message <%= locals.message.id  %></h3>
+          <div class="message-container__text message-container flex">
+            <img type="detail-svg" src="/icons/messageIcon2.svg" alt="message icon">
+            <p class="message-details-text"> <%= locals.message.text  %>  </p>
+          </div>
+          <div class="message-container__user message-container flex">
+            <img type="detail-svg" src="/icons/userIcon.svg" alt="user icon">
+            <p class="message-details-user"> <i><%= locals.message.user  %></i>  </p>
+          </div>
+          <div class="message-container flex">
+            <img type="detail-svg" src="/icons/clockIcon.svg" alt="clock icon">
+            <p class="message-details-time"> <i><%= locals.message.added  %></i>  </p>
+          </div>
+        </section>
+      </main>
+
+    </div>
+        <%- include("partials/footer.ejs") %>
+  </body>
+</html>

@@ -19,7 +19,7 @@
               <div class="message-container__user message-container flex">
                 <img type="svg" src="/icons/userIcon.svg" alt="user icon">
                 <p>
-               <%= message.user %>
+               <i><%= message.user %></i>
                 </p>
               </div>
               <div class="message-container__time message-container flex">
@@ -28,6 +28,7 @@
                   <i><%= message.added.toString().split(" GMT")[0] %></i>
                 </p>
               </div>
+              <a href="/messages/<%= message.id %>"><img class="open-icon" type="svg" src="/icons/openIcon.svg" alt=""></a>
             </div>
           <% }); %>
           <a href="/newMessage" class="button">New Message</a>

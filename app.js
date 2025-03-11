@@ -9,8 +9,8 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", indexRouter);
 app.use("/newMessage", newMessageRouter);
+app.use("/", indexRouter);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
