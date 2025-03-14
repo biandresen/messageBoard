@@ -1,6 +1,7 @@
 import express from "express";
 import { newMessageRouter } from "./routes/newMessage.js";
 import { indexRouter } from "./routes/index.js";
+import "dotenv/config";
 
 const app = express();
 const PORT = process.env.PORT || 3600;

@@ -1,4 +1,3 @@
-import { query } from "express";
 import { pool } from "./pool.js";
 
 export const db = {

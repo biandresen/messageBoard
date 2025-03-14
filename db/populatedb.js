@@ -1,7 +1,6 @@
 #! /usr/bin/env node
 import pkg from "pg";
-import { loadEnvFile } from "process";
-loadEnvFile(process.env);
+import "dotenv/config";
 const { Client } = pkg;
 
 const SQL = `
