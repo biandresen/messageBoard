@@ -15,11 +15,11 @@
           </div>
           <div class="message-container__user message-container flex">
             <img type="detail-svg" src="/icons/userIcon.svg" alt="user icon">
-            <p class="message-details-user"> <i><%= locals.message.user  %></i>  </p>
+            <p class="message-details-user"> <i><%= locals.message.username  %></i>  </p>
           </div>
           <div class="message-container flex">
             <img type="detail-svg" src="/icons/clockIcon.svg" alt="clock icon">
-            <p class="message-details-time"> <i><%= locals.message.added.toString().split(" GMT")[0]  %></i>  </p>
+            <p class="message-details-time"> <i><%= locals.message.added  %></i>  </p>
           </div>
         </section>
       </main>
