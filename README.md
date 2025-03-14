@@ -1,10 +1,12 @@
 # 📬 Mini Message Board
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge&logo=postgresql)
 ![EJS](https://img.shields.io/badge/EJS-Template_Engine-green?style=for-the-badge)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Fullstack Learning](https://img.shields.io/badge/Fullstack-Development-blue?style=for-the-badge)
 
-A simple message board built using **Node.js**, **Express**, and **EJS**.
+
+A simple message board built using **PostgreSQL**, **Node.js**, **Express**, and **EJS**.
 Deployed with Render (PaaS)
 
 Live preview 👉 <a href="https://mini-messageboard-4kua.onrender.com/">Click here</a>
@@ -17,6 +19,7 @@ This project is part of **The Odin Project** curriculum, focusing on building a 
 - Use **EJS** for templating
 - Handle **GET and POST requests**
 - Work with **form submissions**
+- Set up and use a database, **PostgreSQL** (Extra)
 
 ---
 
